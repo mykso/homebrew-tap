@@ -5,7 +5,7 @@
 class Myks < Formula
   desc "A configuration framework for Kubernetes applications"
   homepage "https://github.com/mykso/myks"
-  version "2.1.0"
+  version "2.1.1"
   license "MIT"
 
   depends_on "git" => :optional
@@ -15,16 +15,16 @@ class Myks < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/mykso/myks/releases/download/v2.1.0/myks_2.1.0_darwin_arm64.tar.gz"
-      sha256 "ffebf3f5155c0ce60dedc722c2175c9573b316808b96a9954240dc7a4249153e"
+      url "https://github.com/mykso/myks/releases/download/v2.1.1/myks_2.1.1_darwin_arm64.tar.gz"
+      sha256 "590bcc2ccdad1c3a970e317e586b9e517fa9a1aff184901da614471d93509eae"
 
       def install
         bin.install "myks"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mykso/myks/releases/download/v2.1.0/myks_2.1.0_darwin_amd64.tar.gz"
-      sha256 "4675f7875bad7c32b5a1565f23752cf007164362e88026422ff1962490607995"
+      url "https://github.com/mykso/myks/releases/download/v2.1.1/myks_2.1.1_darwin_amd64.tar.gz"
+      sha256 "c09d3f547ae66e3a3cd9964dda5122b79f80802dc2295dddc60e7296ed9b259f"
 
       def install
         bin.install "myks"
@@ -34,16 +34,16 @@ class Myks < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mykso/myks/releases/download/v2.1.0/myks_2.1.0_linux_arm64.tar.gz"
-      sha256 "dfac5cce209694b34056150515db626b6b30c1db0c681029e192a2cb3abfcae0"
+      url "https://github.com/mykso/myks/releases/download/v2.1.1/myks_2.1.1_linux_arm64.tar.gz"
+      sha256 "013b92e1b936b5fc30e30fc706d6c222a0a591cc9e540cb63599adcc8f6e9ce8"
 
       def install
         bin.install "myks"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mykso/myks/releases/download/v2.1.0/myks_2.1.0_linux_amd64.tar.gz"
-      sha256 "72754c8cedebd9dfb531be2091f7b81c5ff1b9704ed11a2fdb2554d0d9c08f98"
+      url "https://github.com/mykso/myks/releases/download/v2.1.1/myks_2.1.1_linux_amd64.tar.gz"
+      sha256 "a0fe3fe708c50d1c18b2a13fbfbdaec8f335bdcaeca40fda3733b0ce8a262685"
 
       def install
         bin.install "myks"
