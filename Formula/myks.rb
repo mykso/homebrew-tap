@@ -5,7 +5,7 @@
 class Myks < Formula
   desc "Configuration framework for Kubernetes applications"
   homepage "https://github.com/mykso/myks"
-  version "4.2.0"
+  version "4.2.1"
   license "MIT"
 
   depends_on "git" => :optional
@@ -13,16 +13,16 @@ class Myks < Formula
 
   on_macos do
     on_intel do
-      url "https://github.com/mykso/myks/releases/download/v4.2.0/myks_4.2.0_darwin_amd64.tar.gz"
-      sha256 "d58f92ea2417e79d9ae6bf71699bd906f0fd16a3e3e1aeba2907036a3d4df562"
+      url "https://github.com/mykso/myks/releases/download/v4.2.1/myks_4.2.1_darwin_amd64.tar.gz"
+      sha256 "cf8accab91190ba3056bafaa26b4b86bd94b2e823bec177ab2ce2b5510c27deb"
 
       def install
         bin.install "myks"
       end
     end
     on_arm do
-      url "https://github.com/mykso/myks/releases/download/v4.2.0/myks_4.2.0_darwin_arm64.tar.gz"
-      sha256 "abfc295d42cc07c564c5248826bbe2ff803e5c5d8209089e2268ea228bc632b7"
+      url "https://github.com/mykso/myks/releases/download/v4.2.1/myks_4.2.1_darwin_arm64.tar.gz"
+      sha256 "c4318f7e695791a3bcf0ba78750102576e10078d784eae58b5edfaaae99d0251"
 
       def install
         bin.install "myks"
@@ -33,8 +33,8 @@ class Myks < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/mykso/myks/releases/download/v4.2.0/myks_4.2.0_linux_amd64.tar.gz"
-        sha256 "442aab980ccdd739423e0e0517343f889e19e6f0d00beac90ad31f358b76d190"
+        url "https://github.com/mykso/myks/releases/download/v4.2.1/myks_4.2.1_linux_amd64.tar.gz"
+        sha256 "0207be1a95d732caaf132bd15c459fd25e12b38c34fdf9e8e90a8655a2521594"
 
         def install
           bin.install "myks"
@@ -43,8 +43,8 @@ class Myks < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/mykso/myks/releases/download/v4.2.0/myks_4.2.0_linux_arm64.tar.gz"
-        sha256 "45013d5ff06ef1ca528dfb438fd129f610f0e2814f615b7777741a2cd6460d88"
+        url "https://github.com/mykso/myks/releases/download/v4.2.1/myks_4.2.1_linux_arm64.tar.gz"
+        sha256 "3d936cd1bdca31c6c77753965bcd48ee51edab7d8faefc702a8c55fa143eb861"
 
         def install
           bin.install "myks"
