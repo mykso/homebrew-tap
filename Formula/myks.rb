@@ -5,8 +5,10 @@
 class Myks < Formula
   desc "Configuration framework for Kubernetes applications"
   homepage "https://github.com/mykso/myks"
-  version "4.9.0"
+  version "4.10.0"
   license "MIT"
+
+  disable! date: "2025-07-04", because: "the cask should be used now instead", replacement_cask: "myks"
 
   depends_on "git" => :optional
   depends_on "helm" => :optional
