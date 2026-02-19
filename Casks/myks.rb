@@ -3,7 +3,7 @@ cask "myks" do
   name "myks"
   desc "Configuration framework for Kubernetes applications"
   homepage "https://github.com/mykso/myks"
-  version "5.9.1"
+  version "5.9.2"
 
   livecheck do
     skip "Auto-generated on release."
@@ -18,22 +18,22 @@ cask "myks" do
   on_macos do
     on_intel do
       url "https://github.com/mykso/myks/releases/download/v#{version}/myks_#{version}_darwin_amd64.tar.gz"
-      sha256 "1a166037d76b53cb84362e72e012829153cd22f2388a63afa8e0b7b9fbe82e85"
+      sha256 "fb1995f851fa34727e61db19c427f232acab5c9fbcba12b0e3aa14a94cc44d1e"
     end
     on_arm do
       url "https://github.com/mykso/myks/releases/download/v#{version}/myks_#{version}_darwin_arm64.tar.gz"
-      sha256 "fee890e48048f915607ea48721cad22196f2554d0bd9eefa37460196c437b208"
+      sha256 "c989fea9733075b92956e4acbc9afc78ff5c1d34535bf869ddf446a6e68d76ac"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/mykso/myks/releases/download/v#{version}/myks_#{version}_linux_amd64.tar.gz"
-      sha256 "f5c7848f855a953736a10235f3595c30384d4af2c5addbd5e194faf5a1478cf7"
+      sha256 "fd7c4e092863155cd4398a10fd75721290290434e3868b7abdffd81be4688b4d"
     end
     on_arm do
       url "https://github.com/mykso/myks/releases/download/v#{version}/myks_#{version}_linux_arm64.tar.gz"
-      sha256 "b24ef135ddeafe3fb182930dcb11e0a9097be442337f835b5dfda9fd10eb58ac"
+      sha256 "d4ae1bbaa6f836ddcb9045d8f330e176b50755a1f9a6b6378abc4961ff1eeead"
     end
   end
 
