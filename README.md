@@ -79,11 +79,15 @@ the myks repository instead.
 `Formula/myks.rb` is the disabled legacy formula, kept so existing installs get
 a pointer to the cask.
 
+The [Test workflow](.github/workflows/test.yml) audits the cask and installs it
+on macOS and Linux for every pull request and every push to `main`, including
+the bot's release commits.
+
 To test the cask from a local checkout:
 
 ```shell
 HOMEBREW_NO_INSTALL_FROM_API=1 brew install --cask --debug --verbose ./Casks/myks.rb
-brew audit --cask --strict mykso/tap/myks
+brew audit --cask --strict --online mykso/tap/myks
 ```
 
 ## License
