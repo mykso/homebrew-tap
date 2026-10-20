@@ -6,25 +6,25 @@ cask "myks" do
     end
   end
 
-  version "5.15.1"
+  version "5.15.2"
 
   on_macos do
     on_arm do
-      sha256 "d013e1bb86429e1ba65821c0429c7ae465e8c63d3cd38152d0aa32dc4dccdb0a"
+      sha256 "9bc481567197c39145410dd879293863312eac5dc532456de2e91533a89febc6"
       url "https://github.com/mykso/myks/releases/download/v#{version}/myks_#{version}_darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "44f7400d1756bf547940174185581a1dfaa106784db89f3382169c614c819742"
+      sha256 "f868982b66057c176e2259e42695cd7c115a453d3cd632c44753281efa8d1b83"
       url "https://github.com/mykso/myks/releases/download/v#{version}/myks_#{version}_darwin_amd64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "2f81c6dea3103328c037bed4b89fe16312b001b21c700eebae0a7b3cd0274979"
+      sha256 "7d56c387a3bf1d0f713b2689e2aec21ae426bea57743cb30adb13b7df4c8028f"
       url "https://github.com/mykso/myks/releases/download/v#{version}/myks_#{version}_linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "b51abb250cd1916624c5854f9e4a310ded96bda341634c05cf67e8f3de57c928"
+      sha256 "9d0e8e9515df7a27a5070b082709d392faa234b1e85581e4dd90d8115e4afde6"
       url "https://github.com/mykso/myks/releases/download/v#{version}/myks_#{version}_linux_amd64.tar.gz"
     end
   end
