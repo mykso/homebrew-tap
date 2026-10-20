@@ -22,5 +22,13 @@ jobs:
       # Taps this repository at the triggering commit, so no checkout step is needed.
       - uses: Homebrew/actions/setup-homebrew@4790763c0a3ba4036f72634dc079c4a7dfcd4878 # main
       - run: brew audit --cask --strict --online mykso/tap/myks
-      - run: brew install --cask mykso/tap/myks
+      - run: brew install --cask --verbose mykso/tap/myks
+        env:
+          # Turns Homebrew deprecation warnings, which users see on every update, into errors.
+          HOMEBREW_DEVELOPER: "1"
       - run: myks --version
+      - if: runner.os == 'macOS'
+        # The downloaded archive is quarantined, so a clean binary shows the postflight step ran.
+        run: |
+          xattr -p com.apple.quarantine "$(brew --cache --cask mykso/tap/myks)"
+          ! xattr -p com.apple.quarantine "$(brew --caskroom)"/myks/*/myks
