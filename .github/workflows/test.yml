@@ -27,3 +27,8 @@ jobs:
           # Turns Homebrew deprecation warnings, which users see on every update, into errors.
           HOMEBREW_DEVELOPER: "1"
       - run: myks --version
+      - if: runner.os == 'macOS'
+        # The downloaded archive is quarantined, so a clean binary shows the postflight step ran.
+        run: |
+          xattr -p com.apple.quarantine "$(brew --cache --cask mykso/tap/myks)"
+          ! xattr -p com.apple.quarantine "$(brew --caskroom)"/myks/*/myks
